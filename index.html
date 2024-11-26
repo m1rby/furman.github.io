@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cool Company</title>
+    <link rel="stylesheet" href="css/main.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="JavaScript.js" defer></script>
+    <style>
+        .highlight {
+            background-color: yellow;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <section class="header-section">
+        <div class="header-content">
+            <div class="header-logo">
+                <img src="img/logo.png" alt="Logo">
+            </div>
+            <h1>С помощью нас<br>вы сможете создать то, о чем<br></h1>
+            <h2>желаете!</h2>
+            <p>Наши возможности — это ваша победа! Вам доступны огромные услуги. Мы верим в вас и доведем это на все 100%. Вы не остановитесь!</p>
+            <button class="button-1" onclick="newPhoto()">Узнать больше...</button>
+        </div>
+        <div class="header-image">
+            <img src="img/header-img.png" alt="App image">
+        </div>
+    </section>
+
+    <div class="order-form-container">
+        <h2>Order Information</h2>
+        <form id="orderForm" class="order-form" novalidate>
+
+            
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required>
+            <span class="error-message" id="firstNameError"></span>
+    
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required>
+            <span class="error-message" id="lastNameError"></span>
+    
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="XXX-XXX-XXX" pattern="\d{3}-\d{3}-\d{3}" required>
+            <span class="error-message" id="phoneError"></span>
+    
+            <label for="destination">Destination:</label>
+            <input type="text" id="destination" name="destination" required>
+            <span class="error-message" id="destinationError"></span>
+    
+            <label for="dateTime">Date and Time:</label>
+            <input type="date" id="date" name="date" required>
+            <input type="time" id="time" name="time" required>
+            <span class="error-message" id="dateTimeError"></span>
+    
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="1" required>
+            <span class="error-message" id="quantityError"></span>
+    
+            <div class="payment-method">
+                <p>Payment method:</p>
+                <select id="paymentMethod">
+                    <option value="Cash">Cash</option>
+                    <option value="Card">Credit Card</option>
+                    <option value="PayPal">PayPal</option>
+                </select>
+            </div>
+    
+            <button type="submit">Send Order</button>
+        </form>
+    </div>
+
+    <section class="callback">
+        <h2>Форма заказа обратного звонка</h2>
+        <form action="#" class="callback-form">
+            <input type="text" placeholder="Имя" required>
+            <input type="email" placeholder="Введите свой E-mail" required>
+            <input type="tel" placeholder="Телефон" required>
+            <input type="text" placeholder="Какая тема Вас интересует?" required>
+            <button type="submit" class="button-2">Отправить вопрос!</button>
+        </form>
+    </section>
+
+    <footer>
+        <p id="footerText">© Все на этом сайте защищено</p>
+        <button onclick="hideFooter()">Скрыть футер</button>
+    </footer>
+
+
+</body>
+</html>
